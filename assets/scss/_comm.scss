@@ -1,0 +1,46 @@
+#wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: 1000;
+    height: 75px;
+    padding: 0 20px;
+    #logo {
+        img {
+            width: 105px;
+            height: auto;
+        }
+    }
+    #gnb {
+        display: flex;
+        @include flexitems;
+        gap: 20px;
+
+        .app-dawnload {
+            display: block;
+            width: 76px;
+            height: 30px;
+            border-radius: 25px;
+            background-color: $primary;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: $white;
+        }
+    }
+    .layer-search {
+        display: none;
+    }
+}
+.test {
+    font-size: 50px;
+}
