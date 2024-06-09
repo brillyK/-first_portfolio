@@ -10,6 +10,10 @@
             href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <!-- js -->
         <script defer src="./assets/js/comm.js"></script>
@@ -28,14 +32,13 @@
                     </a>
                 </h1>
                 <nav id="gnb">
-                    <button class="app-dawnload">앱다운로드</button>
+                    <button class="app-dawnload">앱 다운로드</button>
                     <p class="menu-open">
                         <a href="#">
                             <span class="sr-only">메뉴펼침</span>
                         </a>
                     </p>
                 </nav>
-                <div class="test">SAFE RESERVATION</div>
                 <div class="search-area">
                     <button class="btn-search">
                         <span class="blind">검색창 열기</span>
@@ -48,8 +51,83 @@
                     </div>
                 </div>
             </header>
-            <div class="swiper slide-intro">slide</div>
-            <main id="main">main</main>
+            <div id="section01" class="section section01 active">
+                <p id="fix-carrier" class="fix-carrier fadeIn">
+                    <img src="./assets/img/carrier.png" alt="" />
+                </p>
+                <dl class="text">
+                    <dt>SAFE RESERVATION</dt>
+                    <dd>안전하고, 믿음가는, 서비스 제공</dd>
+                </dl>
+                <p class="main-text">
+                    <img src="./assets/img/TRUST.png" alt="TRUST" />
+                    <img src="./assets/img/SERVICE.png" alt="SERVICE" />
+                </p>
+            </div>
+            <div id="section02" class="section section02 active">
+                <dl class="text">
+                    <dt>FOR YOU</dt>
+                    <dd>180만개 이상의 콘텐츠</dd>
+                </dl>
+                <p class="main-text">
+                    <img src="./assets/img/PREMIUM.png" alt="TRUST" />
+                    <img src="./assets/img/CONTENT.png" alt="SERVICE" />
+                </p>
+                <p class="baro-btn">
+                    <a href="#">MORE +</a>
+                </p>
+            </div>
+            <div id="section03" class="section section03 active">
+                <dl class="text">
+                    <dt>INTERACTION</dt>
+                    <dd>600만개 이상의 리뷰 제공</dd>
+                </dl>
+                <p class="main-text">
+                    <img src="./assets/img/REAL.png" alt="TRUST" />
+                    <img src="./assets/img/REVIEW.png" alt="SERVICE" />
+                </p>
+                <p class="baro-btn">
+                    <a href="#">MORE +</a>
+                </p>
+            </div>
+            <div id="section04" class="section section04">
+                <dl class="page-mid-title">
+                    <dt>
+                        여기어때는 오늘도 빠르게
+                        <br class="mo-ver" />
+                        성장하고 있습니다
+                    </dt>
+                </dl>
+                <ul class="number-list">
+                    <li>
+                        <p>
+                            <span class="content">3,600</span>
+                        </p>
+                        <span>누적 다운로드</span>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="content">440</span>
+                        </p>
+                        <span>월간 활성 사용자(MAU)</span>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="content">1,890</span>
+                        </p>
+                        <span>누적 사용자</span>
+                    </li>
+                </ul>
+            </div>
+            <main id="main">
+                <h2>
+                    여행과 여가의
+                    <br />
+                    모든
+                    <strong>경험을 연결</strong>
+                    합니다
+                </h2>
+            </main>
             <footer id="footer">footer</footer>
             <div class="bottom-arrow">></div>
         </div>

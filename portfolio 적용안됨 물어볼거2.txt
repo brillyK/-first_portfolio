@@ -1,0 +1,4 @@
+질문
+
+1. search-area 영역이 없어졌으면
+2. 이미지 이동 object-position ?
