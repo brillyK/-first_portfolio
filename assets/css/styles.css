@@ -267,8 +267,7 @@ legend {
 
 #header {
   position: fixed;
-  top: 0;
-  left: 0;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -276,15 +275,11 @@ legend {
   padding: 0 20px;
   z-index: 1002;
 }
-#header #logo {
-  position: fixed;
-}
 #header #logo img {
   width: 105px;
   height: auto;
 }
 #header #gnb {
-  display: flex;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -320,7 +315,7 @@ legend {
   font-weight: 900;
   font-size: 30px;
 }
-#header #gnb .search-area {
+#header .search-area {
   display: none;
   width: 0;
   height: 0;
@@ -518,6 +513,18 @@ legend {
   font-size: 0.875rem;
   text-align: center;
   font-weight: 700;
+}
+
+#main h2 {
+  width: 100%;
+  margin: 0 20px;
+}
+#main h2 ul li {
+  font-size: 1.75rem;
+  font-weight: 1000;
+}
+#main h2 ul li strong {
+  color: rgb(248, 80, 91);
 }
 
 .section04 {
