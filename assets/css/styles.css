@@ -334,7 +334,7 @@ legend {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-56%, -50%);
   width: 201px;
   height: auto;
   z-index: 5;
@@ -516,8 +516,10 @@ legend {
 }
 
 #main h2 {
-  width: 100%;
-  margin: 0 20px;
+  margin: 80px 20px;
+}
+#main h2 ul {
+  margin-bottom: 22px;
 }
 #main h2 ul li {
   font-size: 1.75rem;
@@ -525,6 +527,33 @@ legend {
 }
 #main h2 ul li strong {
   color: rgb(248, 80, 91);
+}
+#main h2 .dawnload-box {
+  display: flex;
+  justify-content: space-between;
+}
+#main h2 .apple-appstore,
+#main h2 .google-play {
+  width: 140px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: rgb(51, 51, 51);
+}
+#main h2 .apple-appstore img,
+#main h2 .google-play img {
+  width: auto;
+  height: 17px;
+}
+#main h2 .apple-appstore {
+  margin-right: 20px;
+}
+#main h2 .apple-appstore img:first-child {
+  width: 20px;
+  height: auto;
+}
+#main h2 .google-play img:first-child {
+  width: 20px;
+  height: auto;
 }
 
 .section04 {

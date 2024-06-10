@@ -77,7 +77,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-56%, -50%);
         width: 201px;
         height: auto;
         z-index: 5;
@@ -258,15 +258,43 @@
 }
 #main {
     h2 {
-        width: 100%;
-        margin: 0 20px;
+        margin: 80px 20px;
         ul {
+            margin-bottom: 22px;
             li {
                 font-size: 1.75rem;
                 font-weight: 1000;
                 strong {
                     color: $primary;
                 }
+            }
+        }
+        .dawnload-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .apple-appstore,
+        .google-play {
+            width: 140px;
+            height: 45px;
+            border-radius: 30px;
+            background-color: $txtDefult;
+            img {
+                width: auto;
+                height: 17px;
+            }
+        }
+        .apple-appstore {
+            margin-right: 20px;
+            img:first-child {
+                width: 20px;
+                height: auto;
+            }
+        }
+        .google-play {
+            img:first-child {
+                width: 20px;
+                height: auto;
             }
         }
     }
