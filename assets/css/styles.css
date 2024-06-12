@@ -524,47 +524,6 @@ legend {
   font-weight: 700;
 }
 
-#main h2 {
-  margin: 80px 20px;
-}
-#main h2 ul {
-  margin-bottom: 22px;
-}
-#main h2 ul li {
-  font-size: 1.75rem;
-  font-weight: 1000;
-}
-#main h2 ul li strong {
-  color: rgb(248, 80, 91);
-}
-#main h2 .dawnload-box {
-  display: flex;
-  justify-content: space-between;
-}
-#main h2 .apple-appstore,
-#main h2 .google-play {
-  width: 140px;
-  height: 45px;
-  border-radius: 30px;
-  background-color: rgb(51, 51, 51);
-}
-#main h2 .apple-appstore img,
-#main h2 .google-play img {
-  width: auto;
-  height: 17px;
-}
-#main h2 .apple-appstore {
-  margin-right: 20px;
-}
-#main h2 .apple-appstore img:first-child {
-  width: 20px;
-  height: auto;
-}
-#main h2 .google-play img:first-child {
-  width: 20px;
-  height: auto;
-}
-
 .section04 {
   position: relative;
   background-image: url(../img/w8SWwtp8lqm9fA8RQCcOAs8wTBY.jpg);
@@ -622,4 +581,81 @@ legend {
   font-weight: 600;
   line-height: 1.4;
   color: #fff;
+}
+
+#main h2 {
+  margin: 80px 20px;
+}
+#main h2 ul {
+  margin-bottom: 22px;
+}
+#main h2 ul li {
+  font-size: 1.75rem;
+  font-weight: 1000;
+}
+#main h2 ul li strong {
+  color: rgb(248, 80, 91);
+}
+#main h2 .dawnload-box {
+  display: flex;
+  justify-content: space-between;
+}
+#main h2 .apple-appstore,
+#main h2 .google-play {
+  width: 140px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: rgb(51, 51, 51);
+}
+#main h2 .apple-appstore img,
+#main h2 .google-play img {
+  width: auto;
+  height: 17px;
+}
+#main h2 .apple-appstore {
+  margin-right: 20px;
+}
+#main h2 .apple-appstore img:first-child {
+  width: 20px;
+  height: auto;
+}
+#main h2 .google-play img:first-child {
+  width: 20px;
+  height: auto;
+}
+#main .container .framer {
+  height: 650px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main .container .framer .sub-logo {
+  display: block;
+  width: 110px;
+  height: auto;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-42%);
+}
+#main .container .framer .css-zgg .css-nupjy1 {
+  position: absolute;
+  display: flex;
+  gap: 9px;
+  top: 350px;
+  left: 50%;
+  transform: translate(-49%);
+}
+#main .container .framer .css-zgg .css-nupjy1 .css-rlmnh1 {
+  width: 100px;
+  height: 100px;
+}
+#main .container .framer .css-zgg .phone-flame {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-53%);
+  width: 290px;
+  height: auto;
 }/*# sourceMappingURL=styles.css.map */

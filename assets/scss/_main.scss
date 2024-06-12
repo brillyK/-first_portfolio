@@ -56,3 +56,86 @@
         }
     }
 }
+#main {
+    h2 {
+        margin: 80px 20px;
+        ul {
+            margin-bottom: 22px;
+            li {
+                font-size: 1.75rem;
+                font-weight: 1000;
+                strong {
+                    color: $primary;
+                }
+            }
+        }
+        .dawnload-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .apple-appstore,
+        .google-play {
+            width: 140px;
+            height: 45px;
+            border-radius: 30px;
+            background-color: $txtDefult;
+            img {
+                width: auto;
+                height: 17px;
+            }
+        }
+        .apple-appstore {
+            margin-right: 20px;
+            img:first-child {
+                width: 20px;
+                height: auto;
+            }
+        }
+        .google-play {
+            img:first-child {
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+    .container {
+        .framer {
+            height: 650px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .sub-logo {
+                display: block;
+                width: 110px;
+                height: auto;
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-42%);
+            }
+            .css-zgg {
+                .css-nupjy1 {
+                    position: absolute;
+                    display: flex;
+                    gap: 9px;
+                    top: 350px;
+                    left: 50%;
+                    transform: translate(-49%);
+                    .css-rlmnh1 {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .phone-flame {
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    transform: translate(-53%);
+                    width: 290px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
