@@ -1,4 +1,13 @@
 질문
 
-1. search-area 영역이 없어졌으면
-2. 이미지 이동 object-position ?
+1. #section01 #fix-carrier img 캐리어 이미지 사이즈 안먹음
+2. .main-text img:last-child,
+        .main-text img:first-child {
+            height: 139px;
+            padding: 0 45px;
+        } 패딩이 안 먹음
+3.@media screen and (min-width: $breakpoint-lg) {
+                    img {
+                        transform: translateY(1%);
+                    }
+                }이미지 세로가 안맞음

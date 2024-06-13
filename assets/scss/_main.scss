@@ -1,10 +1,14 @@
+body {
+    overflow-x: hidden;
+}
+
 .section04 {
     position: relative;
-    background-image: url(../img/w8SWwtp8lqm9fA8RQCcOAs8wTBY.jpg);
+    background-image: url(https://framerusercontent.com/images/w8SWwtp8lqm9fA8RQCcOAs8wTBY.jpg?scale-down-to=1024);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 825px;
+    min-height: 953px;
     padding: 90px 0 50px;
     &::after {
         content: '';
@@ -19,12 +23,17 @@
     .page-mid-title {
         z-index: 10;
         position: absolute;
-        top: 185px;
+        top: 250px;
         width: 100%;
         text-align: center;
         color: $white;
         font-size: 1.5625rem;
         font-weight: 500;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .page-mid-title {
+            font-size: 2.5rem;
+        }
     }
     .number-list {
         position: relative;
@@ -34,11 +43,11 @@
         z-index: 10;
         flex-direction: column;
         padding: 0 65px;
-        margin-top: 300px;
+        margin-top: 350px;
         li {
-            width: 100%;
             text-align: center;
             p {
+                font-family: 'Manrope', sans-serif;
                 text-align: left;
                 font-size: 2.875rem;
                 font-weight: 700;
@@ -49,21 +58,43 @@
                 display: block;
                 text-align: left;
                 font-size: 0.875rem;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: 1.4;
                 color: $white;
             }
+            @media screen and (min-width: $breakpoint-lg) {
+                p {
+                    font-size: 4.375rem;
+                    text-align: center;
+                }
+                > span {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        .number-list {
+            padding: 0 82px;
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .number-list {
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 }
 #main {
     h2 {
-        margin: 80px 20px;
+        margin: 100px 20px;
         ul {
             margin-bottom: 22px;
             li {
+                line-height: 34px;
                 font-size: 1.75rem;
-                font-weight: 1000;
+                font-weight: 900;
                 strong {
                     color: $primary;
                 }
@@ -84,6 +115,16 @@
                 height: 17px;
             }
         }
+        @media screen and (min-width: $breakpoint-md) {
+            .apple-appstore,
+            .google-play {
+                width: 166px;
+                height: 53px;
+                img {
+                    height: 19px;
+                }
+            }
+        }
         .apple-appstore {
             margin-right: 20px;
             img:first-child {
@@ -98,9 +139,18 @@
             }
         }
     }
+    @media screen and (min-width: $breakpoint-md) {
+        h2 {
+            margin: 200px 20px;
+            ul li {
+                line-height: 60px;
+                font-size: 3.125rem;
+            }
+        }
+    }
     .container {
         .framer {
-            height: 650px;
+            height: 690px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -110,9 +160,15 @@
                 width: 110px;
                 height: auto;
                 position: absolute;
-                top: 35%;
+                top: 30%;
                 left: 50%;
                 transform: translate(-42%);
+            }
+            @media screen and (min-width: $breakpoint-md) {
+                .sub-logo {
+                    width: 150px;
+                    top: 36%;
+                }
             }
             .css-zgg {
                 .css-nupjy1 {
@@ -126,7 +182,30 @@
                         width: 100px;
                         height: 100px;
                     }
+                    @media screen and (min-width: $breakpoint-md) {
+                        .css-rlmnh1 {
+                            width: 127px;
+                            height: 127px;
+                        }
+                    }
+                    @media screen and (min-width: $breakpoint-lg) {
+                        .css-rlmnh1 {
+                            width: 178px;
+                            height: 178px;
+                        }
+                    }
                 }
+                @media screen and (min-width: $breakpoint-md) {
+                    .css-nupjy1 {
+                        top: 430px;
+                    }
+                }
+                @media screen and (min-width: $breakpoint-lg) {
+                    .css-nupjy1 {
+                        top: 500px;
+                    }
+                }
+
                 .phone-flame {
                     position: absolute;
                     left: 50%;
@@ -135,6 +214,138 @@
                     width: 290px;
                     height: auto;
                 }
+                @media screen and (min-width: $breakpoint-md) {
+                    .phone-flame {
+                        width: 367px;
+                    }
+                }
+                @media screen and (min-width: $breakpoint-lg) {
+                    .phone-flame {
+                        width: 461px;
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            .framer {
+                height: 800px;
+            }
+        }
+    }
+    .main-port {
+        h2 {
+            margin: 0 20px 50px 20px;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            h2 {
+                margin: 300px 20px 50px 20px;
+            }
+        }
+        .swiper-wrapper {
+            display: flex;
+            gap: 20px;
+            padding: 20px 20px 110px;
+            flex-direction: column;
+            .framer {
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                .framer {
+                    flex-direction: row;
+                }
+            }
+        }
+        .swiper-slide {
+            width: 100%;
+            height: 120px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            .bgimg {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    z-index: 1;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center bottom;
+                    transform: translateY(-38%);
+                    position: relative;
+                    z-index: 0;
+                }
+                @media screen and (min-width: $breakpoint-md) {
+                    img {
+                        transform: translateY(-30%);
+                    }
+                }
+                @media screen and (min-width: $breakpoint-lg) {
+                    img {
+                        transform: translateY(1%);
+                    }
+                }
+            }
+            .tit-view {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                color: $white;
+                z-index: 2;
+
+                strong {
+                    display: flex;
+                    font-size: 20px;
+                    font-weight: 700;
+                    gap: 5px;
+                    &::after {
+                        content: '\f0a9';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 25px;
+                    }
+                    @media screen and (min-width: $breakpoint-md) {
+                        &::after {
+                            font-size: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                @media screen and (min-width: $breakpoint-md) {
+                    strong {
+                        font-size: 25px;
+                    }
+                }
+                p {
+                    font-size: 0.8125rem;
+                    font-weight: 400;
+                }
+                @media screen and (min-width: $breakpoint-md) {
+                    p {
+                        font-size: 0.9375rem;
+                    }
+                }
+            }
+            @media screen and (min-width: $breakpoint-md) {
+                .tit-view {
+                    top: 40px;
+                    left: 40px;
+                }
+            }
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            .swiper-slide {
+                height: 250px;
             }
         }
     }

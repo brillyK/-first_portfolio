@@ -35,6 +35,16 @@
             font-weight: 700;
             color: $white;
         }
+        @media screen and (min-width: $breakpoint-md) {
+            .app-dawnload {
+                width: 96px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            .app-dawnload {
+                width: 100px;
+            }
+        }
         p {
             a {
                 position: relative;
@@ -69,9 +79,15 @@
         display: none;
     }
 }
+@media screen and (min-width: $breakpoint-lg) {
+    #header {
+        padding: 0 45px;
+    }
+}
+
 #section01 {
     position: relative;
-    height: 825px;
+    height: 953px;
     background-color: $secondary;
     #fix-carrier img {
         position: absolute;
@@ -82,6 +98,19 @@
         height: auto;
         z-index: 5;
     }
+    @media screen and (min-width: $breakpoint-md) {
+        #fix-carrier img {
+            width: 302px;
+            top: 55%;
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        #fix-carrier img {
+            width: 418px;
+            top: 60%;
+        }
+    }
+
     .text {
         position: absolute;
         top: 17%;
@@ -89,15 +118,26 @@
         width: calc(100% - 20px);
         margin-bottom: 80px;
         dt {
+            font-family: 'DM Sans', sans-serif;
             font-size: 1.0625rem;
             font-weight: 1000;
             text-align: center;
             color: $primary;
         }
+        @media screen and (min-width: $breakpoint-lg) {
+            dt {
+                font-size: 1.875rem;
+            }
+        }
         dd {
             font-size: 0.75rem;
             font-weight: 500;
             text-align: center;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            dd {
+                font-size: 1.125rem;
+            }
         }
     }
     .main-text {
@@ -117,6 +157,16 @@
             height: 55px;
             z-index: 0;
         }
+        @media screen and (min-width: $breakpoint-md) {
+            img:first-child {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            img:first-child {
+                margin-bottom: 39px;
+            }
+        }
         img:last-child {
             position: relative;
             width: auto;
@@ -124,10 +174,39 @@
             z-index: 100;
         }
     }
+    @media screen and (min-width: $breakpoint-md) {
+        .main-text img:last-child,
+        .main-text img:first-child {
+            height: 100px;
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .main-text img:last-child,
+        .main-text img:first-child {
+            height: 139px;
+        }
+    }
+    .container-arrow {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+            content: '\f0ab';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            line-height: 40px;
+            color: $gray-600;
+        }
+    }
 }
 #section02 {
     position: relative;
-    height: 825px;
+    height: 953px;
     background-color: $primary;
     .text {
         position: absolute;
@@ -136,10 +215,16 @@
         width: calc(100% - 20px);
         margin-bottom: 80px;
         dt {
+            font-family: 'DM Sans', sans-serif;
             font-size: 1.0625rem;
             font-weight: 1000;
             text-align: center;
             color: $white;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            dt {
+                font-size: 1.875rem;
+            }
         }
         dd {
             font-size: 0.75rem;
@@ -147,7 +232,13 @@
             text-align: center;
             color: $white;
         }
+        @media screen and (min-width: $breakpoint-lg) {
+            dd {
+                font-size: 1.125rem;
+            }
+        }
     }
+
     .main-text {
         position: absolute;
         top: 50%;
@@ -165,11 +256,34 @@
             height: 55px;
             z-index: 0;
         }
+        @media screen and (min-width: $breakpoint-md) {
+            img:first-child {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            img:first-child {
+                margin-bottom: 39px;
+            }
+        }
         img:last-child {
             position: relative;
             width: auto;
             height: 55px;
             z-index: 100;
+        }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        .main-text img:last-child,
+        .main-text img:first-child {
+            height: 100px;
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .main-text img:last-child,
+        .main-text img:first-child {
+            height: 139px;
+            padding: 0 45px;
         }
     }
     .baro-btn {
@@ -179,25 +293,36 @@
         width: 100%;
         text-align: center;
         z-index: 1000;
+        display: flex;
+        justify-content: center;
         a {
-            background-image: url(../img/btn_bg1.png);
+            font-family: 'DM Sans', sans-serif;
+            background-color: $primary;
+            border: 3px solid $white;
+            border-radius: 25px;
             color: $white;
-            display: inline-block;
             width: 130px;
             height: 42px;
-            line-height: 40px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 0.875rem;
             text-align: center;
             font-weight: 700;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            a {
+                width: 167px;
+                height: 54px;
+                border-radius: 30px;
+                font-size: 1.0625rem;
+            }
         }
     }
 }
 #section03 {
     position: relative;
-    height: 825px;
+    height: 953px;
     background-color: $txtDefult;
     .text {
         position: absolute;
@@ -206,16 +331,27 @@
         width: calc(100% - 20px);
         margin-bottom: 80px;
         dt {
+            font-family: 'DM Sans', sans-serif;
             font-size: 1.0625rem;
             font-weight: 1000;
             text-align: center;
             color: $white;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            dt {
+                font-size: 1.875rem;
+            }
         }
         dd {
             font-size: 0.75rem;
             font-weight: 500;
             text-align: center;
             color: $white;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            dd {
+                font-size: 1.125rem;
+            }
         }
     }
     .main-text {
@@ -235,11 +371,33 @@
             height: 55px;
             z-index: 0;
         }
+        @media screen and (min-width: $breakpoint-md) {
+            img:first-child {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            img:first-child {
+                margin-bottom: 39px;
+            }
+        }
         img:last-child {
             position: relative;
             width: auto;
             height: 55px;
             z-index: 100;
+        }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        .main-text img:last-child,
+        .main-text img:first-child {
+            height: 100px;
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .main-text img:last-child,
+        .main-text img:first-child {
+            height: 139px;
         }
     }
     .baro-btn {
@@ -249,19 +407,95 @@
         width: 100%;
         text-align: center;
         z-index: 1000;
+        display: flex;
+        justify-content: center;
         a {
-            background-image: url(../img/btn_bg2.png);
+            font-family: 'DM Sans', sans-serif;
+            background-color: $txtDefult;
+            border: 3px solid $white;
+            border-radius: 25px;
             color: $white;
-            display: inline-block;
             width: 130px;
             height: 42px;
-            line-height: 40px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 0.875rem;
             text-align: center;
             font-weight: 700;
         }
+        @media screen and (min-width: $breakpoint-lg) {
+            a {
+                width: 167px;
+                height: 54px;
+                border-radius: 30px;
+                font-size: 1.0625rem;
+            }
+        }
+    }
+}
+#footer {
+    position: relative;
+    background-color: $txtDefult;
+    padding: 30px 20px;
+    color: $white;
+    font-size: 0.75rem;
+    letter-spacing: -1.5%;
+    font-weight: 900;
+    .util {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 42px;
+        a {
+            color: $white;
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .util {
+            font-size: 1.0625rem;
+        }
+    }
+    address {
+        color: $gray-500;
+    }
+    .footer-copy {
+        margin-top: 10px;
+        color: $gray-500;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .footer-copy {
+            font-size: 1rem;
+        }
+    }
+    .sns-link {
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        display: flex;
+        gap: 8px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .sns-link {
+            top: 62px;
+            right: 45px;
+            gap: 15px;
+        }
+        a img {
+            width: 42px;
+        }
+    }
+    .footer-logo {
+        margin-top: 43px;
+        text-align: center;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        .footer-logo a img {
+            width: 170px;
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-lg) {
+    #footer {
+        padding: 68px 45px 35px;
     }
 }

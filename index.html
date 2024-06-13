@@ -7,8 +7,19 @@
 
         <!-- css -->
         <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
+
+        <link
             href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
         />
         <link
             rel="stylesheet"
@@ -28,7 +39,7 @@
             <header id="header" class="header">
                 <h1 id="logo" class="logo">
                     <a href="/">
-                        <img src="./assets/img/main.logo.svg" alt="" />
+                        <img src="./image/main.logo.svg" alt="" />
                     </a>
                 </h1>
                 <nav id="gnb">
@@ -53,16 +64,19 @@
             </header>
             <div id="section01" class="section section01 active">
                 <p id="fix-carrier" class="fix-carrier fadeIn">
-                    <img src="./assets/img/carrier.png" alt="" />
+                    <img src="./image/carrier.png" alt="" />
                 </p>
                 <dl class="text">
                     <dt>SAFE RESERVATION</dt>
                     <dd>안전하고, 믿음가는, 서비스 제공</dd>
                 </dl>
                 <p class="main-text">
-                    <img src="./assets/img/TRUST.png" alt="TRUST" />
-                    <img src="./assets/img/SERVICE.png" alt="SERVICE" />
+                    <img src="./image/TRUST.svg" alt="TRUST" />
+                    <img src="./image/SERVICE.svg" alt="SERVICE" />
                 </p>
+                <div class="bottom-arrow">
+                    <div class="container-arrow"></div>
+                </div>
             </div>
             <div id="section02" class="section section02 active">
                 <dl class="text">
@@ -70,8 +84,8 @@
                     <dd>180만개 이상의 콘텐츠</dd>
                 </dl>
                 <p class="main-text">
-                    <img src="./assets/img/PREMIUM.png" alt="TRUST" />
-                    <img src="./assets/img/CONTENT.png" alt="SERVICE" />
+                    <img src="./image/PREMIUM.svg" alt="TRUST" />
+                    <img src="./image/CONTENT.svg" alt="SERVICE" />
                 </p>
                 <p class="baro-btn">
                     <a href="#">MORE +</a>
@@ -83,8 +97,8 @@
                     <dd>600만개 이상의 리뷰 제공</dd>
                 </dl>
                 <p class="main-text">
-                    <img src="./assets/img/REAL.png" alt="TRUST" />
-                    <img src="./assets/img/REVIEW.png" alt="SERVICE" />
+                    <img src="./image/REAL.svg" alt="TRUST" />
+                    <img src="./image/REVIEW.svg" alt="SERVICE" />
                 </p>
                 <p class="baro-btn">
                     <a href="#">MORE +</a>
@@ -126,41 +140,177 @@
                             여행과 여가의
                             <br />
                             모든
-                            <strong>경험을 연결</strong>
-                            합니다
+                            <strong>경험을 연결</strong>합니다
                         </li>
                     </ul>
                     <div class="download-box">
                         <button class="apple-appstore">
-                            <img src="./assets/img/apple-logo.svg" alt="" />
-                            <img src="./assets/img/appstore.svg" alt="apple-appstore" />
+                            <img src="./image/apple-logo.svg" alt="" />
+                            <img src="./image/appstore.svg" alt="apple-appstore" />
                         </button>
                         <button class="google-play">
-                            <img src="./assets/img/google-logo.svg" alt="" />
-                            <img src="./assets/img/googleplay.svg" alt="google-play" />
+                            <img src="./image/google-logo.svg" alt="" />
+                            <img src="./image/googleplay.svg" alt="google-play" />
                         </button>
                     </div>
                 </h2>
                 <div class="container">
                     <div class="framer">
-                        <img src="./assets/img/sub-iogo.png" class="sub-logo" alt="" />
+                        <img src="./image/sub-iogo.png" class="sub-logo" alt="" />
                         <div class="css-zgg">
                             <div class="css-nupjy1">
-                                <img src="./assets/img/section1_5_stock_02.png" class="css-rlmnh1" alt="" />
-                                <img src="./assets/img/section1_5_stock_03.png" class="css-rlmnh1" alt="" />
-                                <img src="./assets/img/section1_5_stock_04.png" class="css-rlmnh1" alt="" />
-                                <img src="./assets/img/section1_5_stock_05.png" class="css-rlmnh1" alt="" />
-                                <img src="./assets/img/section1_5_stock_06.png" class="css-rlmnh1" alt="" />
-                                <img src="./assets/img/section1_5_stock_07.png" class="css-rlmnh1" alt="" />
-                                <img src="./assets/img/section1_5_stock_08.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_02.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_03.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_04.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_05.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_06.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_07.png" class="css-rlmnh1" alt="" />
+                                <img src="./image/section1_5_stock_08.png" class="css-rlmnh1" alt="" />
                             </div>
-                            <img src="./assets/img/phone.png" class="phone-flame" alt="" />
+                            <img src="./image/phone.png" class="phone-flame" alt="" />
                         </div>
                     </div>
                 </div>
+                <div class="main-port aos-init">
+                    <h2>
+                        <ul>
+                            <li>
+                                서비스의 시작을
+                                <br />
+                                <strong>여기어때</strong>와 함께
+                            </li>
+                        </ul>
+                    </h2>
+                    <ul class="swiper-wrapper">
+                        <div class="framer">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <p class="bgimg">
+                                        <img src="./image/eIFXQ1VhalHr8I3hwj1GN5J5Lg.jpg" alt="마케팅/사업제휴" />
+                                    </p>
+                                    <div class="tit-view">
+                                        <span>
+                                            <strong>마케팅/사업제휴</strong>
+                                            <p>mkt@gccompany.co.kr</p>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <p class="bgimg">
+                                        <img src="./image/hUsGXgYNHTg3eVEDBjIDWFAMHI.jpg" alt="호텔/리조트" />
+                                    </p>
+                                    <div class="tit-view">
+                                        <span>
+                                            <strong>호텔/리조트</strong>
+                                            <p>hotel_sales@gccompany.co.kr</p>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="framer">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <p class="bgimg">
+                                        <img
+                                            src="./image/YzXDR2rZ6nYjuOWyhFF3iZxWiM.jpg"
+                                            alt="펜션/캠핑/글램핑/게스트하우스"
+                                        />
+                                    </p>
+                                    <div class="tit-view">
+                                        <span>
+                                            <strong>펜션/캠핑/글램핑/게스트하우스</strong>
+                                            <p>pension@gccompany.co.kr</p>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <p class="bgimg">
+                                        <img src="./image/4Ofh1pYcyk8qLtAZmoAmrTIOGEI.jpg" alt="레저/티켓" />
+                                    </p>
+                                    <div class="tit-view">
+                                        <span>
+                                            <strong>레저/티켓</strong>
+                                            <p>leisure@gccompany.co.kr</p>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="framer">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <p class="bgimg">
+                                        <img src="./image/q2RVz61vH4YjqpR5OJ6vg2lWRk.jpg" alt="홈&빌라 입점하기" />
+                                    </p>
+                                    <div class="tit-view">
+                                        <span>
+                                            <strong>홈&빌라 입점하기</strong>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <p class="bgimg">
+                                        <img src="./image/ryq7WbkRcsqbimUr3tsevqSHDIo.jpg" alt="공간대여 입점하기" />
+                                    </p>
+                                    <div class="tit-view">
+                                        <span>
+                                            <strong>공간대여 입점하기</strong>
+                                            <p>space@gccompany.co.kr</p>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
             </main>
-            <footer id="footer">footer</footer>
-            <div class="bottom-arrow">></div>
+            <footer id="footer">
+                <ul class="util">
+                    <li>
+                        <a href="#">
+                            <b>브랜드 리소스</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">개임정보처리방침</a>
+                    </li>
+                </ul>
+                <address>
+                    (주) 여기어때컴퍼니 대표이사 : 정명훈
+                    <br class="m-true" />서울특별시 강남구 봉은사로 479, 479타워 11층 대표전화 :02)6749-9065, 이메일
+                    :info@gccompany.co.kr <br class="m-true" />사업자등록번호 :742-86-00224 통신판매번호
+                    :2017-서울강남-01779
+                    <br />
+                    관광사업자 등록번호 :제 1026-24호
+                </address>
+                <p class="footer-copy">Copyright ⓒ 2022 GC Company corp.</p>
+                <p class="sns-link">
+                    <a href="#" class="youtube">
+                        <img src="./image/youtube.svg" alt="" />
+                    </a>
+                    <a href="#" class="twitter">
+                        <img src="./image/twitter.svg" alt="" />
+                    </a>
+                    <a href="#" class="instagram">
+                        <img src="./image/instagram.svg" alt="" />
+                    </a>
+                    <a href="#" class="blog">
+                        <img src="./image/blog.svg" alt="" />
+                    </a>
+                </p>
+                <p class="footer-logo">
+                    <a href="#">
+                        <img src="./image/footer-logo.svg" alt="여기어때컴퍼니" />
+                    </a>
+                </p>
+            </footer>
         </div>
     </body>
 </html>
