@@ -5,35 +5,97 @@
 }
 
 #header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 75px;
-    padding: 0 20px;
-    z-index: 1002;
+    .navbar {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+        padding: 0 20px;
+        z-index: 1002;
 
-    #logo {
-        img {
-            width: 105px;
-            height: auto;
+        #logo {
+            img {
+                width: 105px;
+                height: auto;
+            }
+            @media screen and (min-width: $breakpoint-md) {
+                img {
+                    width: 123px;
+                }
+            }
+        }
+        #gnb {
+            @include flexitems;
+            display: none;
+            gap: 20px;
+            justify-content: flex-end;
+
+            .menu-wrap {
+                display: none;
+                .top-menu {
+                    ul {
+                        .framer-5 {
+                            &::after {
+                                content: '\f062';
+                                font-family: 'Line Awesome Free';
+                                font-weight: 900;
+                                display: inline-block;
+                                transform: rotate(45deg);
+                            }
+                        }
+                        .framer-6 {
+                            &::after {
+                                content: '\f062';
+                                font-family: 'Line Awesome Free';
+                                font-weight: 900;
+                                display: inline-block;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .m-utill {
+            display: none;
+            a {
+                display: none;
+            }
         }
     }
-    #gnb {
-        @include flexitems;
-        gap: 20px;
+    @media screen and (min-width: $breakpoint-lg) {
+        .navbar {
+            padding: 0 45px;
+        }
+    }
+    .search-area {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    .layer-search {
+        display: none;
+    }
+    .gnb-m {
+        display: flex;
+        align-items: center;
         justify-content: flex-end;
-
+        gap: 20px;
         .app-dawnload {
             display: block;
             width: 86px;
             height: 30px;
             border-radius: 25px;
             background-color: $primary;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: $white;
+            a {
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: $white;
+            }
         }
         @media screen and (min-width: $breakpoint-md) {
             .app-dawnload {
@@ -43,6 +105,11 @@
         @media screen and (min-width: $breakpoint-lg) {
             .app-dawnload {
                 width: 100px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            .app-dawnload {
+                display: none;
             }
         }
         p {
@@ -67,21 +134,66 @@
                     // margin-left: 8px;
                 }
             }
+            @media screen and (min-width: $breakpoint-xl) {
+                a {
+                    display: none;
+                }
+            }
         }
     }
-    .search-area {
-        display: none;
-        width: 0;
-        height: 0;
-        overflow: hidden;
-    }
-    .layer-search {
-        display: none;
+    @media screen and (min-width: $breakpoint-lg) {
+        .gnb-m {
+            display: none;
+        }
     }
 }
-@media screen and (min-width: $breakpoint-lg) {
-    #header {
-        padding: 0 45px;
+@media screen and (min-width: $breakpoint-xl) {
+    #header .navbar {
+        #logo img {
+                width: 140px;
+            }
+        }
+        #gnb {
+            display: flex;
+            .menu-wrap {
+                display: flex;
+                grid-gap: 227px;
+                align-items: center;
+                text-align: center;
+
+                ul {
+                    display: flex;
+                    font-size: 1.125rem;
+                    font-weight: 900;
+                    gap: 72px;
+                }
+            }
+        }
+        .m-utill {
+            display: flex;
+            .active {
+                display: block;
+                width: 38px;
+                height: 38px;
+                position: relative;
+                font-size: 0.875rem;
+                font-weight: 900;
+                text-align: center;
+                line-height: 38px;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 38px;
+                    height: 38px;
+                    border: 1px solid $txtDefult;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -53%);
+                }
+            }
+        }
     }
 }
 
@@ -89,14 +201,41 @@
     position: relative;
     height: 953px;
     background-color: $secondary;
-    #fix-carrier img {
-        position: absolute;
-        top: 50%;
+    #fix-carrier {
+        position: fixed;
+        top: 0;
         left: 50%;
-        transform: translate(-56%, -50%);
-        width: 201px;
-        height: auto;
-        z-index: 5;
+        transform: translate(-50%);
+        z-index: 1000;
+        transition: opacity 0.7s ease;
+        &.fadeOut {
+            opacity: 0;
+            pointer-events: none;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-56%, 140%);
+            width: 201px;
+            height: auto;
+            z-index: 5;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            img {
+                transform: translate(-58%, 80%);
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            img {
+                transform: translate(-56%, 50%);
+            }
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            img {
+                transform: translate(-56%, 60%);
+            }
+        }
     }
     @media screen and (min-width: $breakpoint-md) {
         #fix-carrier img {
@@ -152,55 +291,63 @@
         align-items: center;
         img:first-child {
             position: relative;
-            margin-bottom: 15px;
-            width: auto;
-            height: 55px;
+            margin: 0 20px 25px;
+            max-width: 100%;
             z-index: 0;
         }
         @media screen and (min-width: $breakpoint-md) {
             img:first-child {
-                margin-bottom: 30px;
+                margin: 0 20px 35px;
             }
         }
         @media screen and (min-width: $breakpoint-lg) {
             img:first-child {
-                margin-bottom: 39px;
+                margin: 0 45px 35px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            img:first-child {
+                margin: 0 45px 39px;
             }
         }
         img:last-child {
             position: relative;
-            width: auto;
-            height: 55px;
-            z-index: 100;
+            margin: 0 20px;
+            max-width: 100%;
+            z-index: 1001;
         }
     }
-    @media screen and (min-width: $breakpoint-md) {
-        .main-text img:last-child,
-        .main-text img:first-child {
-            height: 100px;
-        }
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-        .main-text img:last-child,
-        .main-text img:first-child {
-            height: 139px;
-        }
-    }
-    .container-arrow {
+    .bottom-arrow {
         position: absolute;
         bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        &::before {
-            content: '\f0ab';
-            font-family: 'Line Awesome Free';
-            font-weight: 900;
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            font-size: 40px;
-            line-height: 40px;
-            color: $gray-600;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        .container-arrow {
+            position: relative;
+            font-size: 50px;
+            color: $gray-500;
+            animation: updown 3s infinite ease-out;
+            &::before {
+                content: '\f0ab';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                line-height: 50px;
+                color: $gray-500;
+            }
+
+            @keyframes updown {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-40px);
+                }
+            }
         }
     }
 }
@@ -251,41 +398,33 @@
         align-items: center;
         img:first-child {
             position: relative;
-            margin-bottom: 15px;
-            width: auto;
-            height: 55px;
+            margin: 0 20px 25px;
+            max-width: 100%;
             z-index: 0;
         }
         @media screen and (min-width: $breakpoint-md) {
             img:first-child {
-                margin-bottom: 30px;
+                margin: 0 20px 35px;
             }
         }
         @media screen and (min-width: $breakpoint-lg) {
             img:first-child {
-                margin-bottom: 39px;
+                margin: 0 45px 39px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            img:first-child {
+                margin: 0 45px 39px;
             }
         }
         img:last-child {
             position: relative;
-            width: auto;
-            height: 55px;
-            z-index: 100;
+            margin: 0 20px;
+            max-width: 100%;
+            z-index: 1001;
         }
     }
-    @media screen and (min-width: $breakpoint-md) {
-        .main-text img:last-child,
-        .main-text img:first-child {
-            height: 100px;
-        }
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-        .main-text img:last-child,
-        .main-text img:first-child {
-            height: 139px;
-            padding: 0 45px;
-        }
-    }
+
     .baro-btn {
         position: absolute;
         bottom: 50px;
@@ -366,40 +505,33 @@
         align-items: center;
         img:first-child {
             position: relative;
-            margin-bottom: 15px;
-            width: auto;
-            height: 55px;
+            margin: 0 20px 25px;
+            max-width: 100%;
             z-index: 0;
         }
         @media screen and (min-width: $breakpoint-md) {
             img:first-child {
-                margin-bottom: 30px;
+                margin: 0 20px 35px;
             }
         }
         @media screen and (min-width: $breakpoint-lg) {
             img:first-child {
-                margin-bottom: 39px;
+                margin: 0 45px 39px;
+            }
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            img:first-child {
+                margin: 0 45px 39px;
             }
         }
         img:last-child {
             position: relative;
-            width: auto;
-            height: 55px;
-            z-index: 100;
+            margin: 0 20px;
+            max-width: 100%;
+            z-index: 1001;
         }
     }
-    @media screen and (min-width: $breakpoint-md) {
-        .main-text img:last-child,
-        .main-text img:first-child {
-            height: 100px;
-        }
-    }
-    @media screen and (min-width: $breakpoint-lg) {
-        .main-text img:last-child,
-        .main-text img:first-child {
-            height: 139px;
-        }
-    }
+
     .baro-btn {
         position: absolute;
         bottom: 50px;

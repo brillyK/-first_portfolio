@@ -99,6 +99,31 @@ body {
                     color: $primary;
                 }
             }
+            > p {
+                display: none;
+                font-size: 1rem;
+                font-weight: 400;
+                color: $gray-600;
+                padding-top: 20px;
+            }
+            @media screen and (min-width: $breakpoint-md) {
+                > p {
+                    display: block;
+                    font-size: 1.0625rem;
+                }
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                > p {
+                    display: block;
+                    font-size: 1.0625rem;
+                }
+            }
+            @media screen and (min-width: $breakpoint-xl) {
+                > p {
+                    display: block;
+                    font-size: 1.25rem;
+                }
+            }
         }
         .dawnload-box {
             display: flex;
@@ -132,6 +157,11 @@ body {
                 height: auto;
             }
         }
+        @media screen and (min-width: $breakpoint-xl) {
+            .apple-appstore {
+                margin-right: 40px;
+            }
+        }
         .google-play {
             img:first-child {
                 width: 20px;
@@ -141,8 +171,29 @@ body {
     }
     @media screen and (min-width: $breakpoint-md) {
         h2 {
-            margin: 200px 20px;
+            margin: 150px 20px;
             ul li {
+                line-height: 50px;
+                font-size: 2.5rem;
+            }
+        }
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        h2 {
+            margin: 150px 45px;
+            ul li {
+                line-height: 60px;
+                font-size: 3.125rem;
+            }
+        }
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+        h2 {
+            text-align: center;
+            ul li {
+                br {
+                    display: none;
+                }
                 line-height: 60px;
                 font-size: 3.125rem;
             }
@@ -205,23 +256,27 @@ body {
                         top: 500px;
                     }
                 }
-
-                .phone-flame {
-                    position: absolute;
-                    left: 50%;
-                    top: 0;
-                    transform: translate(-53%);
-                    width: 290px;
-                    height: auto;
-                }
-                @media screen and (min-width: $breakpoint-md) {
+                .col-zi {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
                     .phone-flame {
-                        width: 367px;
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        transform: translate(-53%);
+                        width: 290px;
+                        height: auto;
                     }
-                }
-                @media screen and (min-width: $breakpoint-lg) {
-                    .phone-flame {
-                        width: 461px;
+                    @media screen and (min-width: $breakpoint-md) {
+                        .phone-flame {
+                            width: 367px;
+                        }
+                    }
+                    @media screen and (min-width: $breakpoint-lg) {
+                        .phone-flame {
+                            width: 461px;
+                        }
                     }
                 }
             }
@@ -263,38 +318,44 @@ body {
             border-radius: 10px;
             overflow: hidden;
             position: relative;
-            .bgimg {
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                z-index: 1;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center bottom;
                 position: relative;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.3);
-                    z-index: 1;
+                z-index: 0;
+                &.img01 {
+                    object-position: 0 100%;
                 }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center bottom;
-                    transform: translateY(-38%);
-                    position: relative;
-                    z-index: 0;
+                &.img02 {
+                    object-position: 0 100%;
                 }
-                @media screen and (min-width: $breakpoint-md) {
-                    img {
-                        transform: translateY(-30%);
-                    }
+                &.img03 {
+                    object-position: 0 100%;
                 }
-                @media screen and (min-width: $breakpoint-lg) {
-                    img {
-                        transform: translateY(1%);
-                    }
+                &.img04 {
+                    object-position: 0 100%;
+                }
+                &.img05 {
+                    object-position: 0 100%;
+                }
+                &.img06 {
+                    object-position: 0 100%;
                 }
             }
+
             .tit-view {
                 position: absolute;
                 top: 20px;
