@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var carrier = document.getElementById('fix-carrier')
+    var section03 = document.getElementById('section03')
+
+    if (carrier && section03) {
+        var section03Top = section03.offsetTop
+
+        window.addEventListener('scroll', function () {
+            var scrollPosition = window.scrollY + window.innerHeight - 1100
+
+            if (scrollPosition > section03Top) {
+                carrier.classList.add('fadeOut')
+            } else {
+                carrier.classList.remove('fadeOut')
+            }
+        })
+    }
+})
+
 const headerEl = document.querySelector('.navbar')
 let lastScrollY = 0
 
@@ -9,7 +28,7 @@ window.addEventListener(
         console.log('현재 스크롤 위치 :' + currentScrollY)
         console.log('마지막 스크롤 위치 :' + lastScrollY)
 
-        if (currentScrollY > 100) {
+        if (currentScrollY > 75) {
             headerEl.classList.add('bg-w')
 
             gsap.to(headerEl, {
@@ -41,25 +60,6 @@ window.addEventListener(
         lastScrollY = currentScrollY
     }, 300),
 )
-
-document.addEventListener('DOMContentLoaded', function () {
-    var carrier = document.getElementById('fix-carrier')
-    var section03 = document.getElementById('section03')
-
-    if (carrier && section03) {
-        var section03Top = section03.offsetTop
-
-        window.addEventListener('scroll', function () {
-            var scrollPosition = window.scrollY + window.innerHeight + -1100
-
-            if (scrollPosition > section03Top) {
-                carrier.classList.add('fadeOut')
-            } else {
-                carrier.classList.remove('fadeOut')
-            }
-        })
-    }
-})
 
 AOS.init({
     //key : value
