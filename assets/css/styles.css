@@ -974,6 +974,9 @@ body {
   left: 50%;
   transform: translate(-42%);
 }
+#main .container .framer .css-zgg {
+  width: 100%;
+}
 #main .container .framer .css-zgg .css-nupjy1 {
   position: absolute;
   display: flex;
