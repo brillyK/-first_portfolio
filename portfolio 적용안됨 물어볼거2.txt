@@ -1,13 +1,10 @@
 질문
 
-1. #section01 #fix-carrier img 캐리어 이미지 사이즈 안먹음
-2. .main-text img:last-child,
-        .main-text img:first-child {
-            height: 139px;
-            padding: 0 45px;
-        } 패딩이 안 먹음
-3.@media screen and (min-width: $breakpoint-lg) {
-                    img {
-                        transform: translateY(1%);
+1. 카드 마우스 오버시에서 앞에 캐리어가 잡혀서 호버가 안됨
+2.&::before:hover {
+                        .tit-view {
+                            opacity: 1;
+                        }
                     }
-                }이미지 세로가 안맞음
+마우스 오버시 before도 보이게
+3. footer 만 maxwidth 적용 안됨

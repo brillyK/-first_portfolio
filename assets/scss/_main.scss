@@ -21,14 +21,15 @@ body {
         background-image: linear-gradient(to bottom, rgba($txtDefult, 1), rgba(0, 0, 0, 0) 23%);
     }
     .page-mid-title {
-        z-index: 10;
         position: absolute;
         top: 250px;
+        left: 0;
         width: 100%;
         text-align: center;
         color: $white;
         font-size: 1.5625rem;
         font-weight: 500;
+        z-index: 10;
     }
     .number-list {
         position: relative;
@@ -86,6 +87,15 @@ body {
                     text-align: center;
                 }
             }
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-xl) {
+    #section04 {
+        .number-list {
+            padding: 0 160px;
+            max-width: 1440px;
+            margin: 350px auto 0;
         }
     }
 }
@@ -163,11 +173,12 @@ body {
                 .css-nupjy1 {
                     position: absolute;
                     display: flex;
+                    overflow: hidden;
                     gap: 9px;
                     top: 350px;
                     left: 50%;
                     transform: translate(-49%);
-                    overflow: hidden;
+
                     .css-rlmnh1 {
                         width: 100px;
                         height: 100px;
@@ -255,6 +266,7 @@ body {
                 left: 20px;
                 color: $white;
                 z-index: 2;
+                display: block;
 
                 strong {
                     display: flex;
@@ -333,15 +345,18 @@ body {
                         .tit-view {
                             top: 40px;
                             left: 40px;
-                            strong {
-                                font-size: 25px;
-                                &::after {
-                                    font-size: 30px;
-                                    line-height: 30px;
+                            span {
+                                color: $white;
+                                strong {
+                                    font-size: 25px;
+                                    &::after {
+                                        font-size: 30px;
+                                        line-height: 30px;
+                                    }
                                 }
-                            }
-                            p {
-                                font-size: 0.9375rem;
+                                p {
+                                    font-size: 0.9375rem;
+                                }
                             }
                         }
                     }
@@ -412,6 +427,72 @@ body {
             }
             .apple-appstore {
                 margin-right: 40px;
+            }
+        }
+        .main-port {
+            .swiper-wrapper {
+                flex-direction: row;
+                padding: 170px 0 350px;
+                justify-content: center;
+                .framer {
+                    .swiper-slide {
+                        position: relative;
+                        width: 224px;
+                        height: 322px;
+                        img {
+                            transition: transform 0.3s ease;
+                        }
+                        &:hover {
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
+                        .img01 {
+                            object-position: 46% 0;
+                        }
+                        .img02 {
+                            object-position: 82% 0;
+                        }
+                        .img03 {
+                            object-position: 10% 0;
+                        }
+                        .img04 {
+                            object-position: 70% 0;
+                        }
+                        .img05 {
+                            object-position: 73% 0;
+                        }
+                        .img06 {
+                            object-position: 20% 0;
+                        }
+                        .tit-view {
+                            left: 13px;
+                            opacity: 0;
+                            transform: opacity 0.3s ease-in-out;
+                            span {
+                                strong {
+                                    font-size: 1.5rem;
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover {
+                            .tit-view {
+                                opacity: 1;
+                            }
+                        }
+                        &::before {
+                            opacity: 0;
+                        }
+                    }
+                    &::before:hover {
+                        .tit-view {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
     }
