@@ -978,6 +978,7 @@ body {
   top: 350px;
   left: 50%;
   transform: translate(-49%);
+  overflow: hidden;
 }
 #main .container .framer .css-zgg .css-nupjy1 .css-rlmnh1 {
   width: 100px;
