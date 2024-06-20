@@ -384,7 +384,6 @@ legend {
 }
 @media screen and (min-width: 1440px) {
   #wrap #header .navbar {
-    max-width: 1440px;
     margin: 0 auto;
   }
   #wrap #header .navbar #logo img {
