@@ -100,7 +100,7 @@ body {
     }
 }
 
-#main {
+#section05 {
     h2 {
         margin: 100px 20px;
         ul {
@@ -291,7 +291,7 @@ body {
     }
 }
 @media screen and (min-width: $breakpoint-md) {
-    #main {
+    #section05 {
         position: relative;
         z-index: 1200;
         h2 {
@@ -369,7 +369,7 @@ body {
     }
 }
 @media screen and (min-width: $breakpoint-lg) {
-    #main {
+    #section05 {
         h2 {
             margin: 150px 45px;
             ul {
@@ -412,7 +412,7 @@ body {
     }
 }
 @media screen and (min-width: $breakpoint-xl) {
-    #main {
+    #section05 {
         h2 {
             text-align: center;
             ul {

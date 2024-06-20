@@ -1,3 +1,35 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section')
+    const navLinks = document.querySelectorAll('.position-link a')
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.5, // 섹션의 50%가 보일 때 트리거
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navLinks.forEach((link) => {
+                    link.classList.remove('active')
+                    link.classList.remove('white')
+                })
+                const id = entry.target.getAttribute('id')
+                const activeLink = document.querySelector(`.position-link a[href="#${id}"]`)
+                activeLink.classList.add('active')
+                if (entry.target.id >= 'section03') {
+                    // section03 이후 섹션에서는 흰색
+                    activeLink.classList.add('white')
+                }
+            }
+        })
+    }, observerOptions)
+
+    sections.forEach((section) => {
+        observer.observe(section)
+    })
+})
+
 document.addEventListener('DOMContentLoaded', function () {
     var carrier = document.getElementById('fix-carrier')
     var section03 = document.getElementById('section03')
