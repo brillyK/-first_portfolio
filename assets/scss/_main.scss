@@ -442,6 +442,7 @@ body {
                         position: relative;
                         width: 224px;
                         height: 322px;
+                        transition: transform 0.8s ease-in-out;
                         &::before {
                             opacity: 0;
                         }
@@ -480,7 +481,7 @@ body {
                         .tit-view {
                             left: 13px;
                             opacity: 0;
-                            // transition: opacity 0.8s ease-in-out;
+                            transition: opacity 0.5s ease-in-out;
                             span {
                                 strong {
                                     font-size: 1.5rem;
@@ -493,12 +494,12 @@ body {
                     }
                 }
             }
-            // .swiper-slide.move-up {
-            //     transform: translateY(-100px);
-            // }
-            // .swiper-slide.move-down {
-            //     transform: translateY(100px);
-            // }
+            .swiper-slide.move-up {
+                transform: translateY(-100px);
+            }
+            .swiper-slide.move-down {
+                transform: translateY(100px);
+            }
         }
     }
 }

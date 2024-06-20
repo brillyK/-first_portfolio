@@ -1259,6 +1259,7 @@ body {
     position: relative;
     width: 224px;
     height: 322px;
+    transition: transform 0.8s ease-in-out;
   }
   #section05 .main-port .swiper-wrapper .framer .swiper-slide::before {
     opacity: 0;
@@ -1302,11 +1303,18 @@ body {
   #section05 .main-port .swiper-wrapper .framer .swiper-slide .tit-view {
     left: 13px;
     opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
   #section05 .main-port .swiper-wrapper .framer .swiper-slide .tit-view span strong {
     font-size: 1.5rem;
   }
   #section05 .main-port .swiper-wrapper .framer .swiper-slide .tit-view span strong::after {
     display: none;
+  }
+  #section05 .main-port .swiper-slide.move-up {
+    transform: translateY(-100px);
+  }
+  #section05 .main-port .swiper-slide.move-down {
+    transform: translateY(100px);
   }
 }/*# sourceMappingURL=styles.css.map */

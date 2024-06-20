@@ -125,48 +125,17 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var scrollPos = $(window).scrollTop()
 
-        // 각 framer 요소에 대해 처리
         $('.framer').each(function () {
             var offsetTop = $(this).offset().top
+            var topBoundary = offsetTop - $(window).height() + 200
+            var bottomBoundary = offsetTop + $(this).height() - 200
 
-            // 애니메이션을 위한 상단 및 하단 경계값 계산
-            var topBoundary = offsetTop - $(window).height() + 100 // 애니메이션 트리거를 위한 오프셋 조정
-            var bottomBoundary = offsetTop + $(this).height() - 100 // 애니메이션 트리거를 위한 오프셋 조정
-
-            // 현재 스크롤 위치가 경계값 내에 있는지 확인
-            if (scrollPos >= topBoundary && scrollPos <= bottomBoundary) {
-                // 첫 번째와 마지막 swiper-slide에 클래스 추가
-                $(this).find('.swiper-slide:first').addClass('move-up')
-                $(this).find('.swiper-slide:last').addClass('move-down')
-            } else {
-                // 경계값을 벗어나면 클래스 제거
-                $(this).find('.swiper-slide:first').removeClass('move-up')
-                $(this).find('.swiper-slide:last').removeClass('move-down')
-            }
-        })
-    })
-})
-
-// GSAP 애니메이션을 초기화합니다.
-gsap.registerPlugin(ScrollTrigger)
-
-// swiper-slide에 대한 GSAP 애니메이션 설정
-gsap.utils.toArray('.swiper-slide').forEach((slide) => {
-    // 마우스 오버 시 애니메이션
-    slide.addEventListener('mouseenter', () => {
-        gsap.to(slide, {
-            duration: 0.3,
-            y: -20, // 위로 20px 이동
-            ease: 'power2.out', // 이징 함수 설정
-        })
-    })
-
-    // 마우스 리브 시 애니메이션
-    slide.addEventListener('mouseleave', () => {
-        gsap.to(slide, {
-            duration: 0.3,
-            y: 0, // 원래 위치로 복귀
-            ease: 'power2.inOut', // 이징 함수 설정
+            $(this)
+                .find('.swiper-slide:first')
+                .toggleClass('move-up', scrollPos >= topBoundary && scrollPos <= bottomBoundary)
+            $(this)
+                .find('.swiper-slide:last')
+                .toggleClass('move-down', scrollPos >= topBoundary && scrollPos <= bottomBoundary)
         })
     })
 })
