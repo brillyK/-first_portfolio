@@ -375,10 +375,10 @@ legend {
   #wrap #header .navbar {
     padding: 0 45px;
   }
-  #wrap .gnb-m {
+  #wrap #header .gnb-m {
     display: none;
   }
-  #wrap .gnb-m .app-dawnload {
+  #wrap #header .gnb-m .app-dawnload {
     width: 100px;
   }
 }
